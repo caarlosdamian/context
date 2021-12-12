@@ -1,16 +1,18 @@
-
-import './App.css';
-import { Page1 } from './components/Page1';
-import { Page2 } from './components/Page2';
-import { ButtonChange } from './components/ButtonChange';
+import "./App.css";
+import { Page1 } from "./components/Page1";
+import { Page2 } from "./components/Page2";
+import { ButtonChange } from "./components/ButtonChange";
+import {DataProvider} from "./context/DataContext";
 
 function App() {
   return (
-    <div className="container">
-      <Page1/>
-      <Page2 />
-      <ButtonChange/>
-    </div>
+    <DataProvider>
+      <div className="container">
+        <Page1 />
+        <Page2 />
+        <ButtonChange />
+      </div>
+    </DataProvider>
   );
 }
 
